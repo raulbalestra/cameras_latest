@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                  // Compatível com ESNext, ideal para ambientes modernos.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Suporte para APIs de DOM e recursos modernos do JS.
+    "module": "ESNext",                  // Módulo ESNext, adequado para bundlers modernos.
+    "skipLibCheck": true,             // Ignora a checagem de tipo em arquivos de biblioteca, melhora desempenho.
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",       // Configurado para módulos gerenciados por bundlers como Webpack ou Vite.
+    "allowImportingTsExtensions": true,  // Permite importar arquivos com extensão `.ts` explícita.
+    "resolveJsonModule": true,           // Suporte para importar módulos JSON.
+    "isolatedModules": true,             // Garante que cada arquivo é um módulo separado.
+    "noEmit": true,                      // Desativa a saída de arquivos JS ao compilar, comum em projetos com bundlers.
+   "jsx": "react-jsx",                  // Habilita o JSX moderno no React, recomendado para novos projetos.
+
+    /* Linting */
+    "strict": true,                      // Ativa o modo estrito do TypeScript.
+    "noUnusedLocals": true,              // Emite erros para variáveis não utilizadas.
+    "noUnusedParameters": true,          // Emite erros para parâmetros não utilizados.
+    "noFallthroughCasesInSwitch": true   // Evita casos de switch sem `break` por segurança.
+  },
+  "include": ["src"],                   // Inclui toda a pasta `src` para a compilação.
+  "references": [{ "path": "./tsconfig.node.json" }] // Referencia configuração adicional para Node.
+}
